@@ -21,7 +21,8 @@ def generate_response(prompt):
         response_text = response.text
         data = json.loads(response_text)
         actual_response = data['response']
-        print(actual_response)
+        #print(actual_response)
+        return actual_response
     else:
         print("Error: ", response.status_code, response.text)
         return None
