@@ -28,7 +28,8 @@ def generate_response(prompt):
 
 iface = gr.Interface(
     fn=generate_response,
-    inputs=gr.inputs.Textbox(lines=2, placeholder="Enter your Prompt here..."),
+    #inputs = gr.inputs.Textbox(lines=2, placeholder="Enter your Prompt here..."),
+    inputs = "Enter your Prompt here...",
     outputs='text'
 )
 
