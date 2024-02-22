@@ -9,13 +9,14 @@ headers = {
 
 data = {
     "model": "mistral",
-    "prompt": "Why is the sky blue"
+    "prompt": "Why is the sky blue",
+    "stream": False,
 }
 
 response = requests.post(url, headers=headers, data=json.dumps(data))
 
 if response.status_code == 200:
-    print(response.json())
+    print(response.text)
 else:
     print("Error: ", response.status_code, response.text)
     
