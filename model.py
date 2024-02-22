@@ -4,7 +4,7 @@ import gradio as gr
 
 url = "http://localhost:11434/api/generate"
 
-header = {
+headers = {
     "Content-Type": "application/json",
 }
 
@@ -29,7 +29,7 @@ def generate_response(prompt):
 iface = gr.Interface(
     fn=generate_response,
     #inputs = gr.inputs.Textbox(lines=2, placeholder="Enter your Prompt here..."),
-    inputs = "Enter your Prompt here...",
+    inputs = gr.Textbox(label="Enter your Prompt here...", lines=2),
     outputs='text'
 )
 
