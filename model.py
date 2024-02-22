@@ -8,6 +8,8 @@ headers = {
     "Content-Type": "application/json",
 }
 
+conversation_history = []
+
 def generate_response(prompt):
     data = {
         "model": "mistral",
