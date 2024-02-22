@@ -14,21 +14,21 @@ def generate_response(prompt):
         "stream": False,
         "prompt": prompt,
     }
+    
+    response = requests.post(url, headers=headers, data=json.dumps(data))
 
-response = requests.post(url, headers=headers, data=json.dumps(data))
-
-if response.status_code == 200:
-    response_text = response.text
-    data = json.loads(response_text)
-    actual_response = data['response']
-    print(actual_response)
-else:
-    print("Error: ", response.status_code, response.text)
-    return None
+    if response.status_code == 200:
+        response_text = response.text
+        data = json.loads(response_text)
+        actual_response = data['response']
+        print(actual_response)
+    else:
+        print("Error: ", response.status_code, response.text)
+        return None
 
 iface = gr.Interface(
     fn=generate_response,
-    inputs=gr.inputs.Textbox(lines=2, placeholder="Enter your Prompt"),
+    inputs=gr.inputs.Textbox(lines=2, placeholder="Enter your Prompt here..."),
     outputs='text'
 )
 
