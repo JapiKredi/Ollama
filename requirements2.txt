@@ -1,4 +1,8 @@
 langchain
 streamlit
 streamlit_chat
-rag
+chromadb 
+pypdf
+#rag
+
+#pip install langchain streamlit streamlit_chat chromadb pypdf
