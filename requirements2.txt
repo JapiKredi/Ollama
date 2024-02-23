@@ -1,1 +1,10 @@
-Chroma
+langchain
+langchain.vectorstores
+langchain.chat_models
+langchain.embeddings
+langchain.schema.output_parser
+langchain.document_loaders
+langchain.text_splitter
+langchain.schema.runnable
+langchain.prompts
+langchain.vectorstores.utils
