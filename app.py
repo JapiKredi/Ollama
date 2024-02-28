@@ -1,5 +1,4 @@
 import os
-import langchain
 import tempfile
 import streamlit as st
 from streamlit_chat import message
