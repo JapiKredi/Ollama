@@ -6,7 +6,6 @@ from RAG_Langchain_ollama import ChatPDF
 
 st.set_page_config(page_title="ChatPDF")
 
-# print('Hello world')
 def display_messages():
     st.subheader("Chat")
     for i, (msg, is_user) in enumerate(st.session_state["messages"]):
